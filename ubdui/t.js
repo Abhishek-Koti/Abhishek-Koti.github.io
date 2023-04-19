@@ -7,9 +7,9 @@ var ce=Number(localStorage.getItem('e'));
 var cg=Number(localStorage.getItem('g'));
 
 if(cc>ce && ce>cg) document.write(c+e+g);
-else if(ce>cc && cc>cg) document.write(e+c+g);
-else if(cg>cc && cc>ce) document.write(g+c+e);
-else document.write(c+e+g);
+if(ce>cc && cc>cg) document.write(e+c+g);
+if(cg>cc && cc>ce) document.write(g+c+e);
+
 
 document.write("<br><br>Click the buttons multiple times and Refresh this page");
   
