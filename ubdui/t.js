@@ -1,21 +1,21 @@
-var a="<br><button style='background-color:red' onclick=count('a')>Apple<div id=a></div></button><br>";
-var b="<br><button  style='background-color:yellow'  onclick=count('b')>Banana<div id=b></div></button><br>";
-var c="<br><button  style='background-color:orange' onclick=count('c')>Carrot<div id=c></div></button><br>";
+var c="<br><button onclick=count('c')>Clothes<div id=c></div></button><br>";
+var e="<br><button onclick=count('e')>Electronics<div id=e></div></button><br>";
+var g="<br><button onclick=count('g')>Grocery<div id=g></div></button><br>";
 
-var ca=Number(localStorage.getItem('a'));
-var cb=Number(localStorage.getItem('b'));
 var cc=Number(localStorage.getItem('c'));
+var ce=Number(localStorage.getItem('e'));
+var cg=Number(localStorage.getItem('g'));
 
-if(ca>cb && cb>cc) document.write(a+b+c);
-else if(cb>ca && ca>cc) document.write(b+a+c);
-else if(cc>ca && ca>cb) document.write(c+a+b);
-else document.write(a+b+c);
+if(cc>ce && ce>cg) document.write(c+e+g);
+else if(ce>cc && cc>cg) document.write(e+c+g);
+else if(cg>cc && cc>ce) document.write(g+c+e);
+else document.write(c+e+g);
 
 document.write("<br><br>Click the buttons multiple times and Refresh this page");
   
-document.getElementById('a').innerHTML=localStorage.getItem('a');
-document.getElementById('b').innerHTML=localStorage.getItem('b');
 document.getElementById('c').innerHTML=localStorage.getItem('c');
+document.getElementById('e').innerHTML=localStorage.getItem('e');
+document.getElementById('g').innerHTML=localStorage.getItem('g');
 
 function count(x) { 
 localStorage.setItem(x,Number(localStorage.getItem(x))+1);
