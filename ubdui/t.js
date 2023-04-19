@@ -6,6 +6,8 @@ var cc=Number(localStorage.getItem('c'));
 var ce=Number(localStorage.getItem('e'));
 var cg=Number(localStorage.getItem('g'));
 
+document.write(c+e+g);
+
 if(cc>ce && ce>cg) document.write(c+e+g);
 if(ce>cc && cc>cg) document.write(e+c+g);
 if(cg>cc && cc>ce) document.write(g+c+e);
